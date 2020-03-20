@@ -1,0 +1,15 @@
+class Outer{
+    val a="Diluar nested Class."
+    class Nested{
+        val b= "Di dalam Nested Class."
+        fun callMe()="Function akan dipanggil didalam Nested Class."
+    }
+}
+fun main(args:Array<String>){
+    //Pengaksesan anggota dari nested class
+    println(Outer.Nested().b)
+    
+    //Pembuatan Objec dari Nested Class
+    val nested = Outer.Nested()
+    println(nested.callMe())
+}
